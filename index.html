@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LiTe AI v1.1</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+  <script defer src="loading.js"></script>
+  <script defer src="neuralnet.js"></script>
+  <script defer src="search.js"></script>
+  <script defer src="voice.js"></script>
+  <script defer src="training.js"></script>
+  <script defer src="networking.js"></script>
+  <script defer src="safety.js"></script>
+  <script defer src="imagegen.js"></script>
+  <link rel="icon" href="logo.png">
+</head>
+<body>
+  <div id="loading-screen">
+    <div class="logo">LiTe AI v1.1</div>
+    <div class="dots">
+      <span>.</span><span>.</span><span>.</span>
+    </div>
+  </div>
+
+  <div id="main-container" class="hidden">
+    <div class="top-bar">
+      <div class="top-logo">LiTe AI v1.1</div>
+      <button id="switch-mode">Switch Mode</button>
+    </div>
+
+    <div id="chat-container"></div>
+
+    <div class="input-area">
+      <input id="user-input" type="text" placeholder="Send a message..." autocomplete="off">
+      <button id="send-button">Send</button>
+    </div>
+  </div>
+</body>
+</html>
