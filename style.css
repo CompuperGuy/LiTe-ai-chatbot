@@ -1,0 +1,121 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #000;
+  font-family: 'Overcame', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+#loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: black;
+}
+
+#loading-screen .logo {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+#loading-screen .dots span {
+  font-size: 3rem;
+  animation: blink 1.5s infinite alternate;
+}
+
+@keyframes blink {
+  0% { opacity: 0.1; }
+  100% { opacity: 1; }
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.top-bar {
+  height: 60px;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  border-bottom: 1px solid #222;
+}
+
+.top-logo {
+  font-size: 1.5rem;
+}
+
+#switch-mode {
+  background: white;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#chat-container {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+  background: #111;
+  border-top: 1px solid #222;
+}
+
+#user-input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 1rem;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+#send-button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.user-message {
+  background: #2e2e2e;
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 10px;
+  align-self: flex-end;
+  max-width: 70%;
+}
+
+.bot-message {
+  background: transparent;
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 10px;
+  align-self: flex-start;
+  max-width: 70%;
+}
