@@ -5,56 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LiTe ai v1.1</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
-  <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
-  <!-- Loading Screen -->
-  <div id="loader" class="loader">
-    <div class="logo">LiTe ai v1.1</div>
-    <div class="dots">
+  <div id="loading-screen" class="loading-screen">
+    <h1 class="logo-text">LiTe ai v1.1</h1>
+    <div class="loading-dots">
       <span>.</span><span>.</span><span>.</span>
     </div>
   </div>
 
-  <!-- Top Bar -->
   <div class="top-bar">
-    <button id="modeToggle">Switch Mode</button>
-    <button id="trainingToggle">Enter Training</button>
-    <button id="voiceToggle">🎤 Voice</button>
+    <button id="mode-switch">🖼 Switch Mode</button>
+    <span class="title">LiTe ai v1.1</span>
   </div>
 
-  <!-- Main Container -->
   <div class="main-container">
-    <!-- Chat Window -->
-    <div id="chat-window" class="chat-window">
-      <!-- Messages will go here -->
+    <div class="chat-container" id="chat-container">
+      <!-- Chat messages appear here -->
     </div>
 
-    <!-- Input Area -->
-    <div class="input-container">
-      <textarea id="user-input" placeholder="Send a message..." rows="1"></textarea>
-      <button id="send-btn">Send</button>
-    </div>
+    <form id="chat-form">
+      <input
+        type="text"
+        id="user-input"
+        placeholder="Type your message here..."
+        autocomplete="off"
+      />
+      <button type="submit" id="send-btn">Send</button>
+    </form>
   </div>
 
-  <!-- Image Generator -->
-  <div id="image-gen" class="image-gen hidden">
-    <textarea id="img-prompt" placeholder="Describe an image..."></textarea>
-    <button id="img-generate">Generate Image</button>
-    <div id="img-result"></div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="main.js"></script>
-  <script src="brain.js"></script>
-  <script src="voice.js"></script>
-  <script src="imagegen.js"></script>
-  <script src="searcher.js"></script>
-  <script src="safety.js"></script>
-  <script src="trainer.js"></script>
-  <script src="storage.js"></script>
-  <script src="settings.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
 
